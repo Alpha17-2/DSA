@@ -1,11 +1,11 @@
 package LinkedList;
 import java.util.Scanner;
 
-public class BasicOperations {
+public class BasicOperationsOnLinkedList {
 
     private Node headNode = null;
     private static final Scanner sc = new Scanner(System.in);
-    public BasicOperations(Node headNode){
+    public BasicOperationsOnLinkedList(Node headNode){
         this.headNode = headNode;
     }
 
@@ -98,4 +98,17 @@ public class BasicOperations {
             }
         }
     }
+
+    public void reverseList(){
+        Node reversed = null;
+        Node traverseNode = headNode;
+        while(traverseNode!=null){
+            Node newNode = new Node(traverseNode.data, null);
+            newNode.next = reversed;
+            reversed = newNode;
+            traverseNode = traverseNode.next;
+        }
+        headNode = reversed;
+    }
+
 }

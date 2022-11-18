@@ -1,13 +1,14 @@
-import LinkedList.BasicOperations;
-import LinkedList.Node;
+import LinkedList.BasicOperationsOnLinkedList;
 
 public class Main {
     public static void main(String[] args) {
-        BasicOperations basicOperations = new BasicOperations(null);
+        BasicOperationsOnLinkedList basicOperations = new BasicOperationsOnLinkedList(null);
         basicOperations.insertNodeAtEnd();
         basicOperations.displayNodes();
-        basicOperations.deleteNthNode();
+        basicOperations.reverseList();
+        System.out.println("After reversal");
         basicOperations.displayNodes();
+
     }
 
 }
