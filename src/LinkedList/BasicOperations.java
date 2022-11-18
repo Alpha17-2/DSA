@@ -55,4 +55,47 @@ public class BasicOperations {
             headNode = headNode.next;
         }
     }
+
+    public void displayNthNode(){
+        System.out.println("Enter which node display");
+        int n= sc.nextInt();
+        Node traverseNode = headNode;
+        for(int i=1;i<n && traverseNode!=null;traverseNode=traverseNode.next){
+            ++i;
+        }
+        if (traverseNode!=null){
+            System.out.println(traverseNode.data);
+        }
+        else{
+            System.out.println("Invalid range");
+        }
+    }
+
+    public void deleteNthNode(){
+        System.out.println("Enter which node to delete");
+        int n= sc.nextInt();
+        // case 1: n = 1
+        if(n==1){
+            deleteNodeFromStart();
+        }
+        else{
+            Node traverseNode = headNode;
+            for(int i=1;i<n-1 && traverseNode!=null; traverseNode = traverseNode.next){
+                i++;
+            }
+            // case 2: N lies in between or is at last
+            if(traverseNode!=null){
+                Node nodeToRemove = traverseNode.next;
+                if(nodeToRemove!=null){
+                    traverseNode.next = nodeToRemove.next;
+                }
+                else {
+                    System.out.println("Invalid range");
+                }
+            }
+            else{
+                System.out.println("Invalid range");
+            }
+        }
+    }
 }
