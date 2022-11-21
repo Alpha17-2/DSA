@@ -1,14 +1,11 @@
 import LinkedList.BasicOperationsOnLinkedList;
+import Tree.BasicOperationsOnTree;
 
 public class Main {
+
     public static void main(String[] args) {
-        BasicOperationsOnLinkedList basicOperations = new BasicOperationsOnLinkedList(null);
-        basicOperations.insertNodeAtEnd();
-        basicOperations.displayNodes();
-        basicOperations.reverseList();
-        System.out.println("After reversal");
-        basicOperations.displayNodes();
-
+        BasicOperationsOnLinkedList basicOperationsOnLinkedList = new BasicOperationsOnLinkedList(null);
+        basicOperationsOnLinkedList.insertNodeAtEnd();
+        basicOperationsOnLinkedList.findMiddleNode();
     }
-
 }

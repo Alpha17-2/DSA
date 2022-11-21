@@ -111,4 +111,19 @@ public class BasicOperationsOnLinkedList {
         headNode = reversed;
     }
 
+    public void reverseFrom(int start,int k){
+
+    }
+
+    public void findMiddleNode(){
+        Node slow = headNode, fast=headNode, prev = null;
+        while(fast!=null && fast.next!=null){
+            prev = slow;
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+        assert slow != null;
+        System.out.println(slow.data);
+    }
+
 }
