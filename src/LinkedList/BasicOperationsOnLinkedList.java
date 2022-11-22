@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class BasicOperationsOnLinkedList {
 
-    private Node headNode = null;
-    private static final Scanner sc = new Scanner(System.in);
+    private Node headNode ;
+    private final Scanner sc = new Scanner(System.in);
     public BasicOperationsOnLinkedList(Node headNode){
         this.headNode = headNode;
     }
@@ -111,8 +111,30 @@ public class BasicOperationsOnLinkedList {
         headNode = reversed;
     }
 
-    public void reverseFrom(int start,int k){
-
+    public void reverseFrom(int start,int last){
+        Node current = headNode;
+        Node prev = null;
+        // assuming start and last are range inclusive
+        for (int i = 1; i < start ; i++) {
+            prev = current;
+            current = current.next;
+        }
+        Node prevStartFrom = prev;
+        Node startFrom = current;
+        for (int i = start ; i <= last; i++) {
+            Node temp = current.next;
+            current.next = prev;
+            prev = current;
+            current = temp;
+        }
+        if(prevStartFrom==null){
+            headNode=prev;
+        }
+        else{
+            prevStartFrom.next = prev;
+        }
+        assert startFrom != null;
+        startFrom.next=current;
     }
 
     public void findMiddleNode(){
