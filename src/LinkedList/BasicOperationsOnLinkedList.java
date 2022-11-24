@@ -192,4 +192,21 @@ public class BasicOperationsOnLinkedList {
         headNode = current;
     }
 
+    public void deleteMiddleNode(){
+        if(headNode==null|| headNode.next==null){
+            headNode = null;
+        }
+        Node slow = headNode;
+        Node fast = headNode;
+        Node prev = null;
+        while(fast!=null && fast.next!=null){
+            prev = slow;
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+        if(prev.next!=null){
+            prev.next = prev.next.next;
+        }
+    }
+
 }
