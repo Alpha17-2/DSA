@@ -169,4 +169,27 @@ public class BasicOperationsOnLinkedList {
         }
     }
 
+    public void rotateListByK(int k){
+        int n=0;
+        Node current = headNode;
+        while (true){
+            n++;
+            if(current.next==null){
+                current.next = headNode;
+                break;
+            }
+            current=current.next;
+        }
+        k%=n;
+        current = headNode;
+        Node prev = null;
+        for(int i=1;i<=n-k;++i){
+            prev = current;
+            current = current.next;
+        }
+        assert prev != null;
+        prev.next = null;
+        headNode = current;
+    }
+
 }
