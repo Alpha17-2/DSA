@@ -148,4 +148,25 @@ public class BasicOperationsOnLinkedList {
         System.out.println(slow.data);
     }
 
+    public void swapAdjacentNodes(){
+        if(headNode==null || headNode.next==null){
+            System.out.println("No nodes to swap");
+        }
+        else{
+            Node current = headNode.next.next;
+            Node previous = headNode;
+            headNode=headNode.next;
+            headNode.next = previous;
+            while (current!=null && current.next!=null){
+                previous.next=current.next;
+                previous=current;
+                Node temp= current.next.next;
+                current.next.next=current;
+
+                current=temp;
+            }
+            previous.next = current;
+        }
+    }
+
 }
