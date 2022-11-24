@@ -209,4 +209,25 @@ public class BasicOperationsOnLinkedList {
         }
     }
 
+    public void removeDuplicatesFromSortedList(){
+        // Assuming that the list is already sorted
+        if(headNode==null || headNode.next==null){
+            System.out.println("Nothing to do");
+        }
+        else{
+            Node current = headNode;
+            Node fast = headNode.next;
+            while(fast!=null){
+                while(fast!=null  && current.data==fast.data){
+                    fast=fast.next;
+                }
+                current.next = fast;
+                current=fast;
+                if (fast!=null){
+                    fast=fast.next;
+                }
+            }
+        }
+    }
+
 }

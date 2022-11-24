@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e2ba6e5-3601-4f8a-a8a6-8e3512cef843" name="Changes" comment="delete middle node">
-      <change beforePath="$PROJECT_DIR$/out/production/DSA/Main.class" beforeDir="false" />
+    <list default="true" id="1e2ba6e5-3601-4f8a-a8a6-8e3512cef843" name="Changes" comment="removed files">
+      <change beforePath="$PROJECT_DIR$/ .gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/ .gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DSA/LinkedList/BasicOperationsOnLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DSA/LinkedList/BasicOperationsOnLinkedList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DSA/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DSA/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkedList/BasicOperationsOnLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedList/BasicOperationsOnLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669305829041</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="removed files">
+      <created>1669306320630</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1669306320630</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -168,7 +180,8 @@
     <MESSAGE value="swap adjacent nodes" />
     <MESSAGE value="rotate list by k" />
     <MESSAGE value="delete middle node" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete middle node" />
+    <MESSAGE value="removed files" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed files" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
