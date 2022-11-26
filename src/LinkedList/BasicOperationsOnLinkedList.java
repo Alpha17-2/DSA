@@ -230,4 +230,41 @@ public class BasicOperationsOnLinkedList {
         }
     }
 
+    public void partitionList(int value){
+        Node current = headNode;
+        Node beforeValue = null;
+        Node afterValue = null;
+        Node firstBeforeValue = null,firstAfterValue = null;
+        while(current!=null){
+            if(current.data<value){
+                if(beforeValue == null){
+                    beforeValue = new Node(current.data, null);
+                    firstBeforeValue = beforeValue;
+                }
+                else {
+                    beforeValue.next = new Node(current.data,null);
+                    beforeValue=beforeValue.next;
+                }
+            }
+            else{
+                if(afterValue==null){
+                    afterValue = new Node(current.data, null);
+                    firstAfterValue=afterValue;
+                }
+                else {
+                    afterValue.next = new Node(current.data,null);
+                    afterValue=afterValue.next;
+                }
+            }
+            current = current.next;
+        }
+        if(firstBeforeValue!=null){
+            beforeValue.next=firstAfterValue;
+        }
+        if(firstAfterValue!=null){
+            afterValue.next = null;
+        }
+        headNode=firstBeforeValue!=null?firstBeforeValue:firstAfterValue;
+    }
+
 }
