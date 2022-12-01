@@ -267,4 +267,44 @@ public class BasicOperationsOnLinkedList {
         headNode=firstBeforeValue!=null?firstBeforeValue:firstAfterValue;
     }
 
+    public void sortOddEvenList(){
+        Node left = null;
+        Node firstLeft = null;
+        Node right = null;
+        Node firstRight = null;
+        Node current = headNode;
+        while(current!=null){
+            if(current.data%2==0){
+                // even number
+                if(right==null){
+                    right = new Node(current.data, null);
+                    firstRight = right;
+                }
+                else{
+                    right.next = new Node(current.data, null);
+                    right = right.next;
+                }
+            }
+            else{
+                // odd number
+                if(left==null){
+                    left = new Node(current.data, null);
+                    firstLeft = left;
+                }
+                else{
+                    left.next = new Node(current.data, null);
+                    left = left.next;
+                }
+            }
+            current = current.next;
+        }
+        if(firstLeft == null){
+            headNode = firstRight;
+        }
+        else {
+            left.next=firstRight;
+            headNode = firstLeft;
+        }
+    }
+
 }
