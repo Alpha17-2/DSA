@@ -307,4 +307,22 @@ public class BasicOperationsOnLinkedList {
         }
     }
 
+    public void removeNodesWithValue(int value){
+        while (headNode!=null && headNode.data==value){
+            headNode = headNode.next;
+        }
+        Node current = headNode;
+        Node next = (headNode!=null)?headNode.next:null;
+        while (next!=null){
+            if(next.data!=value){
+                current.next = next;
+                current = next;
+            }
+            next=next.next;
+        }
+        if(current!=null){
+            current.next = null;
+        }
+    }
+
 }
