@@ -1,4 +1,7 @@
 package LinkedList;
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class BasicOperationsOnLinkedList {
@@ -325,4 +328,53 @@ public class BasicOperationsOnLinkedList {
         }
     }
 
+    public void removeFromSortedList2(){
+        if(headNode==null||headNode.next==null){
+            return;
+        }
+        Node previous = null;
+        Node startPoint = null;
+        Node currentAnswerList = null;
+        Node current = headNode;
+        Node next = current.next;
+        while (current!=null){
+            if(previous!=null && next!=null){
+                if (current.data!= next.data && current.data!= previous.data){
+                    if (currentAnswerList==null){
+                        startPoint=current;
+                        currentAnswerList=current;
+                    }
+                    else {
+                        currentAnswerList.next=current;
+                        currentAnswerList=currentAnswerList.next;
+                    }
+                }
+            } else if (previous==null) {
+                if (current.data!=next.data){
+                    startPoint = current;
+                    currentAnswerList=startPoint;
+                }
+            }else {
+                // next is null
+                if (current.data!=previous.data){
+                    if (startPoint==null){
+                        startPoint=current;
+                        currentAnswerList=startPoint;
+                    }else {
+                        currentAnswerList.next = current;
+                        currentAnswerList=currentAnswerList.next;
+                    }
+                }
+            }
+            previous = current;
+            current=next;
+            if (next!=null){
+                next=next.next;
+            }
+        }
+        if (startPoint!=null){
+            currentAnswerList.next = null;
+        }
+        headNode=startPoint;
+    }
 }
