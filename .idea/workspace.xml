@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e2ba6e5-3601-4f8a-a8a6-8e3512cef843" name="Changes" comment="remove node from list that is equal to provided value">
+    <list default="true" id="1e2ba6e5-3601-4f8a-a8a6-8e3512cef843" name="Changes" comment="remove nodes from sorted list that appears more than once">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DSA/LinkedList/BasicOperationsOnLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DSA/LinkedList/BasicOperationsOnLinkedList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LinkedList/BasicOperationsOnLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedList/BasicOperationsOnLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DSA/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DSA/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +38,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/alpha/IdeaProjects/DSA&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/alpha/Codes/Java/Spring/Json-Web-Tokens-JWT&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
@@ -184,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669899518352</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="remove nodes from sorted list that appears more than once">
+      <created>1670074847591</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1670074847591</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -214,13 +221,14 @@
     <MESSAGE value="partition list on the basis of a given value" />
     <MESSAGE value="partition list on the basis of even odd values" />
     <MESSAGE value="remove node from list that is equal to provided value" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove node from list that is equal to provided value" />
+    <MESSAGE value="remove nodes from sorted list that appears more than once" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove nodes from sorted list that appears more than once" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/DSA$Main.ic" NAME="Main Coverage Results" MODIFIED="1670074559446" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/DSA$Main.ic" NAME="Main Coverage Results" MODIFIED="1670074707270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

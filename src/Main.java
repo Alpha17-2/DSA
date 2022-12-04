@@ -1,13 +1,14 @@
+import Graph.BasicOperationsOnGraph;
+import Graph.GraphNode;
 import LinkedList.BasicOperationsOnLinkedList;
-import Tree.BasicOperationsOnTree;
+import java.util.HashMap;
 
 public class Main {
 
     public static void main(String[] args) {
         BasicOperationsOnLinkedList basicOperationsOnLinkedList = new BasicOperationsOnLinkedList(null);
-        basicOperationsOnLinkedList.insertNodeAtEnd();
-        basicOperationsOnLinkedList.removeFromSortedList2();
-        basicOperationsOnLinkedList.displayNodes();
-
+        BasicOperationsOnGraph basicOperationsOnGraph = new BasicOperationsOnGraph(new GraphNode(new HashMap<>()));
+        basicOperationsOnGraph.addVertices();
+        basicOperationsOnGraph.displayGraph();
     }
 }
