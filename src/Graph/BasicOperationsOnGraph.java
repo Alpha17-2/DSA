@@ -1,7 +1,5 @@
 package Graph;
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
 public class BasicOperationsOnGraph {
     GraphNode graphNode;
@@ -26,6 +24,15 @@ public class BasicOperationsOnGraph {
                 vertices.add(b);
                 graphNode.graph.put(a,vertices);
             }
+            if (graphNode.graph.containsKey(b)){
+                graphNode.graph.get(b).add(a);
+            }
+            else {
+                Set<Integer> vertices = new HashSet<>();
+                vertices.add(a);
+                graphNode.graph.put(b,vertices);
+            }
+
         }
     }
 
@@ -36,6 +43,34 @@ public class BasicOperationsOnGraph {
                 System.out.print(vertices+" ");
             }
             System.out.println();
+        }
+    }
+
+    public void displayBFS(Map<Integer,Boolean> visited,int currentNode){
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(currentNode);
+        while (!queue.isEmpty()){
+            int front = queue.poll();
+            if (!visited.get(front)){
+                visited.put(front,true);
+                System.out.print(front+" ");
+                if (graphNode.graph.containsKey(front)){
+                    queue.addAll(graphNode.graph.get(front));
+                }
+            }
+        }
+    }
+
+    public void traverseBfs(){
+        Map<Integer,Boolean> visited = new HashMap<>();
+
+        for (int node : graphNode.graph.keySet()){
+            visited.put(node,false);
+        }
+        for (int node:graphNode.graph.keySet()){
+            if (!visited.get(node)){
+                displayBFS(visited,node);
+            }
         }
     }
 }

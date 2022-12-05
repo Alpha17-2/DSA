@@ -10,5 +10,6 @@ public class Main {
         BasicOperationsOnGraph basicOperationsOnGraph = new BasicOperationsOnGraph(new GraphNode(new HashMap<>()));
         basicOperationsOnGraph.addVertices();
         basicOperationsOnGraph.displayGraph();
+        basicOperationsOnGraph.traverseBfs();
     }
 }
